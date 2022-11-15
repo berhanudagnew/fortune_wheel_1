@@ -27,6 +27,9 @@ class _HomePageState extends State<HomePage>
     Luck("salad", Colors.accents[10]),
     Luck("cheese", Colors.accents[12]),
     Luck("carrot", Colors.accents[14]),
+    Luck("carrot", Colors.green),
+    Luck("carrot", Colors.green),
+    Luck("carrot", Colors.green),
   ];
 
   @override
