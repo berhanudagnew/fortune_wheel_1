@@ -46,10 +46,17 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.green, Colors.blue.withOpacity(0.2)])),
+            // color: Color(0xFF64138E).withOpacity(0.8),
+            // gradient: LinearGradient(
+            //   begin: Alignment.topCenter,
+            //   end: Alignment.bottomLeft,
+            //   colors: [
+            //     Color(0xFF64138E),
+            //     Color(0xFF64138E).withOpacity(0.1),
+            //     Color(0xFF64138E)
+            //   ],
+            // ),
+            ),
         child: AnimatedBuilder(
             animation: _ani,
             builder: (context, child) {

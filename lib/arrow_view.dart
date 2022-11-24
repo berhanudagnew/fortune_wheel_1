@@ -3,6 +3,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class ArrowView extends StatelessWidget {
+  double height;
+  double width;
+  ArrowView({required this.height, required this.width});
+  // Size get size => Size(MediaQuery.of(context).size.width * 0.8,
+  //     MediaQuery.of(context).size.width * 0.8);
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -10,7 +15,7 @@ class ArrowView extends StatelessWidget {
       child: Transform.rotate(
         angle: pi,
         child: Padding(
-          padding: EdgeInsets.only(top: 80),
+          padding: EdgeInsets.only(top: height / 2 + 15),
           child: ClipPath(
             clipper: _ArrowClipper(),
             child: Container(
@@ -18,9 +23,9 @@ class ArrowView extends StatelessWidget {
                   gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [Colors.black12, Colors.black])),
-              height: 40,
-              width: 40,
+                      colors: [Colors.yellow, Colors.yellow])),
+              height: height / 2 - 100,
+              width: width / 2 - 100,
             ),
           ),
         ),

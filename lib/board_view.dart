@@ -28,7 +28,7 @@ class _BoardViewState extends State<BoardView> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
+      // alignment: Alignment.cente,
       children: <Widget>[
         //shadow
         Container(
@@ -41,7 +41,7 @@ class _BoardViewState extends State<BoardView> {
         Transform.rotate(
           angle: -(widget.current + widget.angle) * 2 * pi,
           child: Stack(
-            alignment: Alignment.center,
+            // alignment: Alignment.topCenter,
             children: <Widget>[
               for (var luck in widget.items) ...[_buildCard(luck)],
               for (var luck in widget.items) ...[_buildImage(luck)],
@@ -51,7 +51,10 @@ class _BoardViewState extends State<BoardView> {
         Container(
           height: size.height,
           width: size.width,
-          child: ArrowView(),
+          child: ArrowView(
+            height: size.height,
+            width: size.width,
+          ),
         ),
       ],
     );
@@ -85,9 +88,11 @@ class _BoardViewState extends State<BoardView> {
         height: size.height,
         width: size.width,
         alignment: Alignment.topCenter,
+        // margin: EdgeInsets.all(10),
         child: ConstrainedBox(
-          constraints:
-              BoxConstraints.expand(height: size.height / 3, width: 44),
+          constraints: BoxConstraints.expand(
+              height: size.height / 4,
+              width: size.width / 2 - (size.width / 2) + 35),
           child: Image.asset(luck.asset),
         ),
       ),
